@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8BC34A;
+  height: 5rem;
+  border-top: 15px solid #558B2F;
+  border-bottom: 15px solid #558B2F;
+}

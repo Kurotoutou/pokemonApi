@@ -1,0 +1,40 @@
+<h2>Pokedex</h2>
+<div id="pokedexDisplay">
+  <section id="tabPoke">
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Info</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (poke of pokemonResult.results; track poke.name) {
+          <tr>
+            <td>{{ poke.pokeID }}</td>
+            <td>{{ poke.pokeName }}</td>
+            <td><img [src]="poke.pokeImg" [alt]="poke.name"></td>
+            <td>
+              <button (click)="getOne(poke.url)" class="pokemon-list">Info</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+  <section id="detailsPoke">
+    <app-pokemon [pokemonToDisplay]="pokemonToDisplay"></app-pokemon>
+  </section>
+</div>
+<section id="nextPreviousBtn">
+
+
+  <button (click)="previous()">⬅</button>
+
+
+  <button (click)="next()">➡</button>
+
+
+</section>

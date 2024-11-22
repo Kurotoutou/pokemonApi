@@ -1,0 +1,7 @@
+<ul>
+  @for(link of links; track link.title) {
+    <li>
+      <a [routerLink]="link.url">{{link.title}}</a>
+    </li>
+  }
+</ul>

@@ -1,0 +1,26 @@
+<section>
+  @if(pokemonToDisplay) {
+    <h3>{{pokemonToDisplay.name}}</h3>
+    <p>Id : {{pokemonToDisplay.id}}</p>
+    <img [src]="pokemonToDisplay.sprites.other.dream_world.front_default">
+    <div>
+      <p>Height : {{pokemonToDisplay.height}}</p>
+      <p>Weight : {{pokemonToDisplay.weight}}</p>
+    </div>
+    <div>
+      <p>Types : </p>
+      <span *ngFor="let type of pokemonToDisplay.types" [ngClass]="type.type.name"> {{type.type.name}}</span>
+    </div>
+  } @else {
+    <h3>Name : ??</h3>
+    <p>Id : ??</p>
+
+    <div>
+      <p>Height : ??</p>
+      <p>Weight : ??</p>
+    </div>
+    <div>
+      <p>Types :  ??</p>
+    </div>
+  }
+</section>
